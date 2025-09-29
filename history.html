@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История Магнитогорска</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0063b0;
+            --secondary-color: #f5f5f5;
+            --text-color: #333;
+            --header-height: 80px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(-45deg, #0063b0, #004c8c, #0077cc, #0055a4);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            height: var(--header-height);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 500;
+        }
+
+        .nav-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            margin-top: calc(var(--header-height) + 40px);
+            padding: 0 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .history-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .history-section h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.8em;
+            border-bottom: 2px solid rgba(0, 99, 176, 0.1);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .history-section p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            animation: slideIn 0.5s ease;
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+
+        .timeline-item p {
+            margin: 10px 0 0 0;
+            font-size: 1em;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 0 15px;
+            }
+
+            .history-section {
+                padding: 20px;
+            }
+
+            .history-image {
+                height: 200px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>История Магнитогорска</h1>
+        <button onclick="window.location.href='index_simple_new.html'" class="nav-button">
+            <i class="fas fa-map-marked-alt"></i> К карте города
+        </button>
+    </header>
+
+    <main class="main-content">
+        <section class="history-section">
+            <h2>История города</h2>
+            <p>Магнитогорск - город с уникальной историей, основанный в 1929 году у подножия горы Магнитной. Решение о строительстве металлургического комбината и города было принято в 1929 году, а уже 30 июня 1929 года началось строительство первых палаток у горы Магнитной.</p>
+            <p>Название города происходит от горы Магнитной, известной своими богатейшими залежами железной руды. Эта гора была открыта ещё в 1743 году, и за всю историю из неё было добыто более 450 миллионов тонн руды.</p>
+            <p>Магнитогорск стал символом индустриализации страны и примером героического труда советских людей. Город строился одновременно с металлургическим комбинатом, что определило его уникальную планировку и архитектурный облик.</p>
+        </section>
+
+        <section class="history-section">
+            <h2>Ключевые этапы развития</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>1929 год</h3>
+                    <p>Начало строительства города и металлургического комбината. Первые палатки появились у подножия горы Магнитной.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1931 год</h3>
+                    <p>Начало строительства первой доменной печи. Тысячи добровольцев со всей страны приезжают на строительство.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1932 год</h3>
+                    <p>1 февраля выдан первый чугун на первой домне комбината. Эта дата считается днём рождения Магнитогорского металлургического комбината.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1939 год</h3>
+                    <p>Магнитогорск получает статус города. К этому времени здесь уже проживало более 200 тысяч человек.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1941-1945 годы</h3>
+                    <p>В годы Великой Отечественной войны каждый третий снаряд и каждый второй танк были изготовлены из магнитогорской стали.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1971 год</h3>
+                    <p>Открытие монумента "Тыл — фронту", ставшего символом трудового подвига магнитогорцев.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Современность</h3>
+                    <p>Сегодня Магнитогорск - это современный промышленный центр с развитой инфраструктурой, культурной жизнью и перспективами развития. Город продолжает расти и развиваться, сохраняя при этом свою уникальную историю.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <h2>Культурное наследие</h2>
+            <p>Магнитогорск известен не только своей промышленной мощью, но и богатой культурной жизнью. В городе работают драматический театр имени А. С. Пушкина, театр оперы и балета, консерватория, картинная галерея. Город стал колыбелью для многих талантливых деятелей искусства, спортсменов и учёных.</p>
+            <p>Культурная жизнь города насыщена событиями: регулярно проводятся фестивали, концерты, выставки. Особое место занимает хоккейная команда «Металлург», являющаяся многократным чемпионом страны.</p>
+        </section>
+    </main>
+
+    <script>
+        // Плавная анимация при скролле
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.history-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'all 0.5s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
